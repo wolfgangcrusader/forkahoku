@@ -1,0 +1,45 @@
+/* src/components/Card.css */
+.card {
+    width: 150px;
+    height: 200px;
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #564d79; /* Light golden color */
+    color: #ffffff; /* Brown text color */
+    font-size: 1.2em;
+    border: 2px solid #fb94ff; /* Golden rod border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card.revealed {
+    background-color: #ffffff; /* Golden color when revealed */
+    color: #000; /* Black text color */
+    animation: pop 0.3s ease-in-out;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.card p {
+    margin: 0;
+    text-align: center;
+}
